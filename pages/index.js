@@ -5,27 +5,10 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Денежныgе знаки </title>
-        <style>
-          body{" "}
-          {`
-    background: #c7b39b url(images/MyCollages.jpg); 
-    color: #fff; 
-    `}
-        </style>
+        <title>Денежные знаки </title>
 
         <link rel="icon" href="/ic_launcher-web.ico" />
       </Head>
-
-      <style jsx>{`
-        .container {
-          margin: 50px;
-        }
-        p {
-          color: black;
-        }
-        background-image: url(public/MyCollages.jpg);
-      `}</style>
 
       <main>
         <h1 className="title"> Денежные знаки всего мира</h1>
@@ -118,13 +101,6 @@ export default function Home() {
       </main>
 
       <footer />
-      <style>
-        body{" "}
-        {`
-    background: #c7b39b url(images/MyCollages.jpg); 
-    color: #fff; 
-    `}
-      </style>
 
       <style jsx>{`
         .container {
@@ -134,6 +110,7 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          margin: 50px;
         }
 
         .content {
@@ -150,6 +127,7 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          background-image: url(/images/MyCollages.jpg);
         }
 
         footer {
@@ -174,6 +152,10 @@ export default function Home() {
         a {
           color: inherit;
           text-decoration: none;
+        }
+
+        p {
+          color: black;
         }
 
         .title a {
@@ -212,8 +194,6 @@ export default function Home() {
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
 
-        background { url(images/MyCollages.jpg); }
-
         .grid {
           display: flex;
           align-items: center;
@@ -221,6 +201,7 @@ export default function Home() {
           flex-wrap: wrap;
           flex-basis: 50%;
           margin-top: 3rem;
+          background: #fafafa;
         }
 
         .card {
@@ -279,14 +260,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-
-      <style>
-        body{" "}
-        {`
-background: #c7b39b url(images/MyCollages.jpg); 
-color: #fff; 
-`}
-      </style>
     </div>
   );
 }
