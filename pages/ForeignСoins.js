@@ -1,8 +1,7 @@
-export default function ForeignСoins() {
-  return (
-    <div>
-      <p>Привет!</p>
-      <h1> просто слово </h1>
-    </div>
-  );
-}
+<style>
+  body{" "}
+  {`
+    background: #c7b39b url(images/bg.jpg); /* Цвет фона и путь к файлу */
+    color: #fff; /* Цвет текста */
+    `}
+</style>;

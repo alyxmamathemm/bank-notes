@@ -5,7 +5,15 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Денежные знаки </title>
+        <title>Денежныgе знаки </title>
+        <style>
+          body{" "}
+          {`
+    background: #c7b39b url(images/MyCollages.jpg); 
+    color: #fff; 
+    `}
+        </style>
+
         <link rel="icon" href="/ic_launcher-web.ico" />
       </Head>
 
@@ -21,76 +29,102 @@ export default function Home() {
 
       <main>
         <h1 className="title"> Денежные знаки всего мира</h1>
+        <section className="content">
+          <Link href="/CoinsOfRussia">
+            <div className="grid">
+              <a href="#" className="card">
+                {" "}
+                <h3>Монеты России</h3>
+                <p>
+                  Найди свои юбилейные монеты, а так-же монеты времен: РФ, СССР,
+                  РСФСР, Российской Империи, древней Руси, античности и
+                  средневековья. &nbsp; <p>&nbsp;</p>
+                </p>
+                <p>&nbsp;</p>
+              </a>
+            </div>
+          </Link>
 
-        <Link href="/CoinsOfRussia">
-          <div className="grid">
-            <a href="#" className="card">
-              {" "}
-              <h3>Монеты России &rarr;</h3>
-              <p>
-                Найди свои юбилейные монеты, а так-же монеты времен: РФ, СССР,
-                РСФСР, Российской Империи, древней Руси, античности и
-                средневековья. &nbsp;{" "}
-              </p>
-            </a>
-          </div>
-        </Link>
+          <Link href="/ForeignСoins">
+            <div className="grid">
+              <a href="#" className="card">
+                {" "}
+                <h3>
+                  Иностранные монеты
+                  <p>&#8595;</p>
+                </h3>
+                <p>
+                  Найди свою юбилейную, или обычную иностранную монету, любого
+                  временного промежутка. &nbsp; <p>&nbsp;</p>
+                </p>
+              </a>
+            </div>
+          </Link>
 
-        <Link href="/ForeignСoins">
-          <div className="grid">
-            <a href="#" className="card">
-              {" "}
-              <h3>Иностранные монеты &rarr;</h3>
-              <p>
-                Найди свою юбилейную, или обычную иностранную монету, любого
-                временного промежутка. &nbsp;{" "}
-              </p>
-            </a>
-          </div>
-        </Link>
+          <Link href="/BanknotesOfRussia">
+            <div className="grid">
+              <a href="#" className="card">
+                {" "}
+                <h3>
+                  Банкноты России
+                  <p> &#8595;</p>
+                </h3>
+                <p>
+                  Здесь вы сможете отыскать свои юбилейные, а так-же обычные
+                  банкноты времен: РФ, СССР, РСФСР, Российской Империи. &nbsp;
+                  {""}
+                  <p>&nbsp;</p>
+                </p>
+              </a>
+            </div>
+          </Link>
 
-        <Link href="/BanknotesOfRussia">
-          <div className="grid">
-            <a href="#" className="card">
-              {" "}
-              <h3>Банкноты России &rarr;</h3>
-              <p>
-                Здесь вы сможете отыскать свои юбилейные, а так-же обычные
-                банкноты времен: РФ, СССР, РСФСР, Российской Империи. &nbsp;
-                {""}
-              </p>
-            </a>
-          </div>
-        </Link>
+          <Link href="/ForeignBanknots">
+            <div className="grid">
+              <a href="#" className="card">
+                {" "}
+                <h3>
+                  Иностранные банкноты
+                  <p>&#8595;</p>
+                </h3>
+                <p>
+                  Кликнув сюда, вы перейдете на страницу, где сможете отыскать
+                  любую иностранную банкноту.&nbsp;
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                </p>
+              </a>
+            </div>
+          </Link>
 
-        <Link href="/ForeignBanknots">
-          <div className="grid">
-            <a href="#" className="card">
-              {" "}
-              <h3>Иностранные банкноты &rarr;</h3>
-              <p>
-                Кликнув сюда, вы перейдете на страницу, где сможете отыскать
-                любую иностранную банкноту.
-              </p>
-            </a>
-          </div>
-        </Link>
-
-        <Link href="/HelpfulInformation">
-          <div className="grid">
-            <a href="#" className="card">
-              {" "}
-              <h3>Полезная информация &rarr;</h3>
-              <p>
-                Просто нажмите сюда, чтобы узнать все о монетах и банкнотах. Их
-                дефектах, способах защиты и ТД.
-              </p>
-            </a>
-          </div>
-        </Link>
+          <Link href="/HelpfulInformation">
+            <div className="grid">
+              <a href="#" className="card">
+                {" "}
+                <h3>
+                  Полезная информация
+                  <p>&#8595;</p>
+                </h3>
+                <p>
+                  Просто нажмите сюда, чтобы узнать все о монетах и банкнотах.
+                  Их дефектах, способах защиты и ТД.&nbsp;
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                </p>
+              </a>
+            </div>
+          </Link>
+        </section>
       </main>
 
-      <footer></footer>
+      <footer />
+      <style>
+        body{" "}
+        {`
+    background: #c7b39b url(images/MyCollages.jpg); 
+    color: #fff; 
+    `}
+      </style>
 
       <style jsx>{`
         .container {
@@ -100,6 +134,13 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        .content {
+          display: flex;
+          max-width: 10000px;
+          flex-wrap: rap;
+          max-height: 100000px;
         }
 
         main {
@@ -140,7 +181,7 @@ export default function Home() {
           text-decoration: none;
         }
 
-        .title a:hover,
+        <style > .title a:hover,
         .title a:focus,
         .title a:active {
           text-decoration: underline;
@@ -164,20 +205,21 @@ export default function Home() {
 
         code {
           background: #fafafa;
-          border-radius: 5px;
+          border-radius: 51px;
           padding: 0.75rem;
           font-size: 1.1rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
 
+        background { url(images/MyCollages.jpg); }
+
         .grid {
           display: flex;
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-
-          max-width: 800px;
+          flex-basis: 50%;
           margin-top: 3rem;
         }
 
@@ -215,9 +257,9 @@ export default function Home() {
           height: 1em;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 60000px) {
           .grid {
-            width: 100%;
+            width: 1900%;
             flex-direction: column;
           }
         }
@@ -237,6 +279,14 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
+
+      <style>
+        body{" "}
+        {`
+background: #c7b39b url(images/MyCollages.jpg); 
+color: #fff; 
+`}
+      </style>
     </div>
   );
 }
