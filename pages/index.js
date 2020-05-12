@@ -17,13 +17,15 @@ export default function Home() {
             <div className="grid">
               <a href="#" className="card">
                 {" "}
-                <h3>Монеты России</h3>
+                <h3>
+                  Монеты России
+                  <p>&#8595;</p>
+                </h3>
                 <p>
                   Найди свои юбилейные монеты, а так-же монеты времен: РФ, СССР,
                   РСФСР, Российской Империи, древней Руси, античности и
-                  средневековья. &nbsp; <p>&nbsp;</p>
+                  средневековья.
                 </p>
-                <p>&nbsp;</p>
               </a>
             </div>
           </Link>
@@ -74,7 +76,6 @@ export default function Home() {
                   Кликнув сюда, вы перейдете на страницу, где сможете отыскать
                   любую иностранную банкноту.&nbsp;
                   <p>&nbsp;</p>
-                  <p>&nbsp;</p>
                 </p>
               </a>
             </div>
@@ -100,51 +101,34 @@ export default function Home() {
         </section>
       </main>
 
-      <footer />
-
       <style jsx>{`
         .container {
-          min-height: 100vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          margin: 50px;
+          height: 700px;
+          padding-left: 10px;
+          margin-left: 1px;
         }
 
         .content {
           display: flex;
-          max-width: 10000px;
+          max-width: 100000px;
           flex-wrap: rap;
-          max-height: 100000px;
+          max-height: 1000px;
         }
 
         main {
           padding: 5rem 0;
           flex: 1;
           display: flex;
+
+          margin-top: 10;
+          margin-bottom: 10;
+
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-image: url(/images/MyCollages.jpg);
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
           justify-content: center;
           align-items: center;
         }
@@ -169,10 +153,39 @@ export default function Home() {
           text-decoration: underline;
         }
 
+        footer {
+          width: 100%;
+          height: 100px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        footer img {
+          margin-left: 0.5rem;
+        }
+
+        footer a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
         .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
+          font-family: "Rubik One", sans-serif;
+          font-size: 50px;
+          text-transform: uppercase;
+          background: #2e2f45;
+          display: table;
+          margin: 20px auto;
+          color: white;
+          border-radius: 5px;
+
+          padding: 5px 10px;
+          background: linear-gradient(45deg, #00008b 33%, #8b0000 66%, #008080);
+
+          color: #ffffff;
         }
 
         .title,
@@ -186,8 +199,8 @@ export default function Home() {
         }
 
         code {
-          background: #fafafa;
-          border-radius: 51px;
+          background: #ffffff;
+          border-radius: 100px;
           padding: 0.75rem;
           font-size: 1.1rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
@@ -201,7 +214,18 @@ export default function Home() {
           flex-wrap: wrap;
           flex-basis: 50%;
           margin-top: 3rem;
-          background: #fafafa;
+          margin: 4px;
+
+          border: 1px solid #0100;
+          background: #ffffff;
+          border-radius: 10px;
+          width: 200px;
+          height: 367px;
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
         }
 
         .card {
@@ -249,11 +273,11 @@ export default function Home() {
       <style jsx global>{`
         html,
         body {
-          padding: 0;
           margin: 0;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
+          background-image: url(/images/MyCollages.jpg);
         }
 
         * {
