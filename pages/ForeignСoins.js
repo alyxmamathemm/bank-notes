@@ -1,7 +1,8 @@
-<style>
-  body{" "}
-  {`
-    background: #c7b39b url(images/bg.jpg); /* Цвет фона и путь к файлу */
-    color: #fff; /* Цвет текста */
-    `}
-</style>;
+export default function HelpfulInformation() {
+  return (
+    <div>
+      <p>Привет!</p>
+      <h1> Олег лох </h1>
+    </div>
+  );
+}

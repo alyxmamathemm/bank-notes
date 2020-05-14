@@ -22,8 +22,8 @@ export default function Home() {
                   <p>&#8595;</p>
                 </h3>
                 <p>
-                  Найди свои юбилейные монеты, а так-же монеты времен: РФ, СССР,
-                  РСФСР, Российской Империи, древней Руси, античности и
+                  Найди своиf юбилейные монеты, а так-же монеты времен: РФ,
+                  СССР, РСФСР, Российской Империи, древней Руси, античности и
                   средневековья.
                 </p>
               </a>
@@ -39,7 +39,7 @@ export default function Home() {
                   <p>&#8595;</p>
                 </h3>
                 <p>
-                  Найди свою юбилейную, или обычную иностранную монету, любого
+                  Найди свою юбилейfную, или обычную иностранную монету, любого
                   временного промежутка. &nbsp; <p>&nbsp;</p>
                 </p>
               </a>
@@ -55,7 +55,7 @@ export default function Home() {
                   <p> &#8595;</p>
                 </h3>
                 <p>
-                  Здесь вы сможете отыскать свои юбилейные, а так-же обычные
+                  Здесь вы сможете отыскать свои юfбилейные, а так-же обычные
                   банкноты времен: РФ, СССР, РСФСР, Российской Империи. &nbsp;
                   {""}
                   <p>&nbsp;</p>
@@ -116,8 +116,8 @@ export default function Home() {
         .content {
           display: flex;
           max-width: 100000px;
-          flex-wrap: rap;
           max-height: 1000px;
+          align-items: baseline;
         }
 
         main {
@@ -147,7 +147,7 @@ export default function Home() {
           text-decoration: none;
         }
 
-        <style > .title a:hover,
+        .title a:hover,
         .title a:focus,
         .title a:active {
           text-decoration: underline;
@@ -216,9 +216,6 @@ export default function Home() {
           margin-top: 3rem;
           margin: 4px;
 
-          border: 1px solid #0100;
-          background: #ffffff;
-          border-radius: 10px;
           width: 200px;
           height: 367px;
         }
@@ -235,16 +232,17 @@ export default function Home() {
           text-align: left;
           color: inherit;
           text-decoration: none;
-          border: 1px solid #eaeaea;
+          border: 1px solid #000000;
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
+          background: #ffffff;
         }
 
         .card:hover,
         .card:focus,
         .card:active {
           color: #4169e1;
-          border-color: #4169e1;
+          border-color: #000000;
         }
 
         .card h3 {
