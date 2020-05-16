@@ -21,11 +21,13 @@ export default function Home() {
                   Монеты России
                   <p>&#8595;</p>
                 </h3>
-                <p>
-                  Найди своиf юбилейные монеты, а так-же монеты времен: РФ,
-                  СССР, РСФСР, Российской Империи, древней Руси, античности и
+                <p1>
+                  Найди свои юбилейные монеты, а так-же монеты времен: РФ, СССР,
+                  РСФСР, Российской Империи, древней Руси, античности и
                   средневековья.
-                </p>
+                </p1>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
               </a>
             </div>
           </Link>
@@ -36,12 +38,13 @@ export default function Home() {
                 {" "}
                 <h3>
                   Иностранные монеты
-                  <p>&#8595;</p>
+                  <p> &#8595;</p>
                 </h3>
-                <p>
-                  Найди свою юбилейfную, или обычную иностранную монету, любого
+                <p1>
+                  Найди свою юбилейную, или обычную иностранную монету, любого
                   временного промежутка. &nbsp; <p>&nbsp;</p>
-                </p>
+                  <p>&nbsp;</p>
+                </p1>
               </a>
             </div>
           </Link>
@@ -51,15 +54,16 @@ export default function Home() {
               <a href="#" className="card">
                 {" "}
                 <h3>
+                  {" "}
                   Банкноты России
                   <p> &#8595;</p>
                 </h3>
-                <p>
-                  Здесь вы сможете отыскать свои юfбилейные, а так-же обычные
+                <p1>
+                  Здесь вы сможете отыскать свои юбилейные, а так-же обычные
                   банкноты времен: РФ, СССР, РСФСР, Российской Империи. &nbsp;
                   {""}
                   <p>&nbsp;</p>
-                </p>
+                </p1>
               </a>
             </div>
           </Link>
@@ -72,11 +76,12 @@ export default function Home() {
                   Иностранные банкноты
                   <p>&#8595;</p>
                 </h3>
-                <p>
+                <p1>
                   Кликнув сюда, вы перейдете на страницу, где сможете отыскать
                   любую иностранную банкноту.&nbsp;
                   <p>&nbsp;</p>
-                </p>
+                  <p>&nbsp;</p>
+                </p1>
               </a>
             </div>
           </Link>
@@ -85,16 +90,19 @@ export default function Home() {
             <div className="grid">
               <a href="#" className="card">
                 {" "}
-                <h3>
-                  Полезная информация
-                  <p>&#8595;</p>
-                </h3>
-                <p>
-                  Просто нажмите сюда, чтобы узнать все о монетах и банкнотах.
-                  Их дефектах, способах защиты и ТД.&nbsp;
-                  <p>&nbsp;</p>
-                  <p>&nbsp;</p>
-                </p>
+                <div className="dodo">
+                  <h3>
+                    Полезная информация
+                    <p>&#8595;</p>
+                  </h3>
+                  <p1>
+                    Просто нажмите сюда, чтобы узнать все о монетах и банкнотах.
+                    Их дефектах, способах защиты и ТД.&nbsp;
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                  </p1>
+                </div>
               </a>
             </div>
           </Link>
@@ -113,11 +121,20 @@ export default function Home() {
           margin-left: 1px;
         }
 
+        .h3: {
+          color: #1e90ff;
+        }
+
         .content {
           display: flex;
           max-width: 100000px;
           max-height: 1000px;
           align-items: baseline;
+        }
+
+        .tetle:hover {
+          color: #1e90ff;
+          background: #1e90ff;
         }
 
         main {
@@ -136,10 +153,6 @@ export default function Home() {
         a {
           color: inherit;
           text-decoration: none;
-        }
-
-        p {
-          color: black;
         }
 
         .title a {
@@ -188,6 +201,9 @@ export default function Home() {
           color: #ffffff;
         }
 
+        .p:hover {
+        }
+
         .title,
         .description {
           text-align: center;
@@ -202,7 +218,7 @@ export default function Home() {
           background: #ffffff;
           border-radius: 100px;
           padding: 0.75rem;
-          font-size: 1.1rem;
+
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
@@ -214,10 +230,8 @@ export default function Home() {
           flex-wrap: wrap;
           flex-basis: 50%;
           margin-top: 3rem;
+          font-size: 22px;
           margin: 4px;
-
-          width: 200px;
-          height: 367px;
         }
 
         * {
@@ -226,28 +240,43 @@ export default function Home() {
         }
 
         .card {
+          text-align: center;
+          padding: 8px 10px;
+          border: solid 1px #777777;
+          color: #7777777;
+          background: #ffffff;
+          tansition: all 0.3s linear;
+          -webkit-transition: all 0.3s linear;
+          -moz-transition: all 0.3s linear;
+          text-transform: capitaliz;
           margin: 1rem;
           flex-basis: 45%;
           padding: 1.5rem;
           text-align: left;
           color: inherit;
+          border: 1, 4 px solid #000000;
           text-decoration: none;
-          border: 1px solid #000000;
+          width: 260px;
+          height: 600px;
+
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
-          background: #ffffff;
+        }
+
+        .card:hover {
+          color: #ffffff;
+          background: #696969;
+
+          tansition: all 0.3s linear;
+          -webkit-transition: all 0.3s linear;
+          -moz-transition: all 0.3s linear;
         }
 
         .card:hover,
         .card:focus,
         .card:active {
-          color: #4169e1;
+          color: #ffffff;
           border-color: #000000;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
         }
 
         .card p {
@@ -264,6 +293,7 @@ export default function Home() {
           .grid {
             width: 1900%;
             flex-direction: column;
+            height: 420px;
           }
         }
       `}</style>
