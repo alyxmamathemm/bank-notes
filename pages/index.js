@@ -77,7 +77,7 @@ export default function Home() {
           </div>
 
           <div className="grid">
-            <Link href="/ForeignBanknots">
+            <Link href="/ForeignBanknots/ForeignBanknots">
               <a href="#" className="card">
                 {" "}
                 <div className="h3">
@@ -276,15 +276,6 @@ export default function Home() {
           background: #696969;
 
           tansition: all 0.3s linear;
-          -webkit-transition: all 0.3s linear;
-          -moz-transition: all 0.3s linear;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #ffffff;
-          border-color: #000000;
         }
 
         .card p {
