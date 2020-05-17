@@ -13,99 +13,110 @@ export default function Home() {
       <main>
         <h1 className="title"> Денежные знаки всего мира</h1>
         <section className="content">
-          <Link href="/CoinsOfRussia">
-            <div className="grid">
+          <div className="grid">
+            <Link href="/CoinsOfRussia">
               <a href="#" className="card">
                 {" "}
-                <h3>
-                  Монеты России
-                  <p>&#8595;</p>
-                </h3>
-                <p1>
+                <div className="h3">
+                  <h3>
+                    Монеты России
+                    <p>&#8595;</p>
+                  </h3>
+                </div>
+                <p>
                   Найди свои юбилейные монеты, а так-же монеты времен: РФ, СССР,
                   РСФСР, Российской Империи, древней Руси, античности и
                   средневековья.
-                </p1>
+                </p>
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
               </a>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          <Link href="/ForeignСoins">
-            <div className="grid">
+          <div className="grid">
+            <Link href="/ForeignСoins">
               <a href="#" className="card">
                 {" "}
-                <h3>
-                  Иностранные монеты
-                  <p> &#8595;</p>
-                </h3>
-                <p1>
+                <div className="h3">
+                  <h3>
+                    Иностранные монеты
+                    <p> &#8595;</p>
+                  </h3>
+                </div>
+                <p>
                   Найди свою юбилейную, или обычную иностранную монету, любого
                   временного промежутка. &nbsp; <p>&nbsp;</p>
                   <p>&nbsp;</p>
-                </p1>
+                  <p>&nbsp;</p>
+                </p>
               </a>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          <Link href="/BanknotesOfRussia">
-            <div className="grid">
+          <div className="grid">
+            <Link href="/BanknotesOfRussia">
               <a href="#" className="card">
                 {" "}
-                <h3>
-                  {" "}
-                  Банкноты России
-                  <p> &#8595;</p>
-                </h3>
-                <p1>
+                <div className="h3">
+                  <h3>
+                    {" "}
+                    Банкноты России
+                    <p> &#8595;</p>
+                  </h3>
+                </div>
+                <p>
                   Здесь вы сможете отыскать свои юбилейные, а так-же обычные
                   банкноты времен: РФ, СССР, РСФСР, Российской Империи. &nbsp;
                   {""}
                   <p>&nbsp;</p>
-                </p1>
+                  <p>&nbsp;</p>
+                </p>
               </a>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          <Link href="/ForeignBanknots">
-            <div className="grid">
+          <div className="grid">
+            <Link href="/ForeignBanknots">
               <a href="#" className="card">
                 {" "}
-                <h3>
-                  Иностранные банкноты
-                  <p>&#8595;</p>
-                </h3>
-                <p1>
+                <div className="h3">
+                  <h3>
+                    Иностранные банкноты
+                    <p>&#8595;</p>
+                  </h3>
+                </div>
+                <p>
                   Кликнув сюда, вы перейдете на страницу, где сможете отыскать
                   любую иностранную банкноту.&nbsp;
                   <p>&nbsp;</p>
                   <p>&nbsp;</p>
-                </p1>
+                  <p>&nbsp;</p>
+                </p>
               </a>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          <Link href="/HelpfulInformation">
-            <div className="grid">
+          <div className="grid">
+            <Link href="/HelpfulInformation">
               <a href="#" className="card">
                 {" "}
-                <div className="dodo">
+                <div className="h3">
                   <h3>
                     Полезная информация
                     <p>&#8595;</p>
                   </h3>
-                  <p1>
-                    Просто нажмите сюда, чтобы узнать все о монетах и банкнотах.
-                    Их дефектах, способах защиты и ТД.&nbsp;
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                  </p1>
                 </div>
+                <p1>
+                  Просто нажмите сюда, чтобы узнать все о монетах и банкнотах.
+                  Их дефектах, способах защиты и ТД.&nbsp;
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                  <p>&nbsp;</p>
+                </p1>
               </a>
-            </div>
-          </Link>
+            </Link>
+          </div>
         </section>
       </main>
 
@@ -119,10 +130,6 @@ export default function Home() {
           height: 700px;
           padding-left: 10px;
           margin-left: 1px;
-        }
-
-        .h3: {
-          color: #1e90ff;
         }
 
         .content {
@@ -194,14 +201,11 @@ export default function Home() {
           margin: 20px auto;
           color: white;
           border-radius: 5px;
-
+          border: solid 2px #000000;
           padding: 5px 10px;
           background: linear-gradient(45deg, #00008b 33%, #8b0000 66%, #008080);
-
           color: #ffffff;
-        }
-
-        .p:hover {
+          border-radius: 10px;
         }
 
         .title,
@@ -239,11 +243,15 @@ export default function Home() {
           padding: 0;
         }
 
+        .h3 {
+          color: #191970;
+        }
+
         .card {
           text-align: center;
           padding: 8px 10px;
-          border: solid 1px #777777;
-          color: #7777777;
+          border: solid 1.2px #000000;
+          color: #777777;
           background: #ffffff;
           tansition: all 0.3s linear;
           -webkit-transition: all 0.3s linear;
@@ -254,7 +262,7 @@ export default function Home() {
           padding: 1.5rem;
           text-align: left;
           color: inherit;
-          border: 1, 4 px solid #000000;
+          border: 1.4 px solid #000000;
           text-decoration: none;
           width: 260px;
           height: 600px;
@@ -306,6 +314,8 @@ export default function Home() {
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
           background-image: url(/images/MyCollages.jpg);
+          max-width: 1800px;
+          max-height: 80px;
         }
 
         * {
