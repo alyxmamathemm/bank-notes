@@ -1,68 +1,60 @@
-import Head from "next/head";
-import Link from "next/link";
+import React from "react";
+import {
+  Button,
+  Menu,
+  MenuItem,
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+} from "@material-ui/core";
 
-export default function Home() {
+import MenuIcon from "@material-ui/icons/Menu";
+
+export default function SimpleMenu() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
-    <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-    <div id="myDropdown" class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+    <div>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+          ></IconButton>
+          <Typography variant="h6">Новости</Typography>
+          <Button color="inherit">Вход</Button>
+        </Toolbar>
+      </AppBar>
+      <Button
+        aria-controls="simple-menu"
+        aria-haspopup="true"
+        variant="contained"
+        color="primary"
+        onClick={handleClick}
+      >
+        ОТКРООООООЙ
+      </Button>
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Раз</MenuItem>
+        <MenuItem onClick={handleClose}>Два</MenuItem>
+        <MenuItem onClick={handleClose}>Три</MenuItem>
+      </Menu>
     </div>
-  </div>
-
-<style jsx>{`
-
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-
-
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-
-.dropdown-content a:hover {background-color: #ddd}
-
-.show {display:block;}
-
-
-
-`}</style>  
-
   );
 }
-
