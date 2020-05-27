@@ -19,48 +19,57 @@ export default function SimpleMenu() {
     setAnchorEl(event.currentTarget);
   };
 
+  const article = styled.article` {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+  `;
   const handleClose = () => {
     setAnchorEl(null);
   };
 
-  const Button = styled.button`
-    color: ${(props) => (props.primary ? "white" : "palevioletred")};
-    background: ${(props) => (props.primary ? "palevioletred" : "white")};
+  <input
+    type="button"
+    value="Монеты СССР"
+    onClick='location.href="http://localhost:3000/BanknotesOfRussia"'
+  ></input>;
 
+  const Button = styled.button`
+    color: ${(props) => (props.primary ? "#4B0082" : "palevioletred")};
+    background: ${(props) => (props.primary ? "palevioletred" : "white")};
     font-size: 20px;
     margin: 10px;
     padding: 5px 20px;
-    border: 2px solid palevioletred;
-    border-radius: 9px;
+    border: 2px solid #000000;
+    border-radius: 5px;
     width: 200px;
     height: 80px;
-    display: table-cell;
-    vertical-align: middle;
 
-    align-items: stretch;
+    &:hover {
+      color: #ff0000;
+      background: #f0f8ff;
+    }
   `;
 
   return (
     <div>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-          ></IconButton>
-          <Typography variant="h6">Выберите категорию. </Typography>
-
           <div>
-            <Button color="inherit">Монеты РФ</Button>
-            <Button color="inherit">Монеты СССР</Button>
-            <Button color="inherit">Монеты РСФСР</Button>
-            <Button color="inherit">Монеты Российской империи</Button>
-            <Button color="inherit">Монеты Древней Руси</Button>
-            <Button color="inherit">Монеты Античности</Button>
-            <Button color="inherit">Монеты Средневековья </Button>
-            <Button color="inherit">Интересные монеты</Button>
-            <Button color="inherit">Наборы монеты</Button>
+            <section>
+              <article>
+                <Button>Монеты РФ</Button>
+
+                <Button color="inherit">Монеты СССР</Button>
+                <Button color="inherit">Монеты РСФСР</Button>
+                <Button color="inherit">Монеты Российской империи</Button>
+                <Button color="inherit">Монеты Древней Руси</Button>
+                <Button color="inherit">Монеты Античности</Button>
+                <Button color="inherit">Монеты Средневековья </Button>
+
+                <Button color="inherit">Наборы монеты</Button>
+              </article>
+            </section>
           </div>
         </Toolbar>
       </AppBar>

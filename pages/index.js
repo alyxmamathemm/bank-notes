@@ -273,7 +273,7 @@ export default function Home() {
 
         .card:hover {
           color: #ffffff;
-          background: #696969;
+          background: #708090;
 
           tansition: all 0.3s linear;
         }
