@@ -1,3 +1,5 @@
+import HouseOutlinedIcon from "@material-ui/icons/HouseOutlined";
+
 import React from "react";
 import {
   Button,
@@ -10,7 +12,9 @@ import {
 } from "@material-ui/core";
 import styled from "styled-components";
 
-import MenuIcon from "@material-ui/icons/Menu";
+<HouseOutlinedIcon color="primary" fontSize="small" />;
+<HouseOutlinedIcon>star</HouseOutlinedIcon>;
+<Typography variant="srOnly">Create a user</Typography>;
 
 export default function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -19,20 +23,19 @@ export default function SimpleMenu() {
     setAnchorEl(event.currentTarget);
   };
 
-  const article = styled.article` {
-  padding: 10px;
-  margin: 10px;
-  background: aqua;
+  const Article = styled.article`
+     {
+      padding: 10px;
+      margin: 10px;
+
+      display: flex;
+      flex-wrap: wrap;
+    }
   `;
+
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-  <input
-    type="button"
-    value="Монеты СССР"
-    onClick='location.href="http://localhost:3000/BanknotesOfRussia"'
-  ></input>;
 
   const Button = styled.button`
     color: ${(props) => (props.primary ? "#4B0082" : "palevioletred")};
@@ -44,6 +47,7 @@ export default function SimpleMenu() {
     border-radius: 5px;
     width: 200px;
     height: 80px;
+    flex: 1 0 21%;
 
     &:hover {
       color: #ff0000;
@@ -57,7 +61,7 @@ export default function SimpleMenu() {
         <Toolbar>
           <div>
             <section>
-              <article>
+              <Article>
                 <Button>Монеты РФ</Button>
 
                 <Button color="inherit">Монеты СССР</Button>
@@ -68,7 +72,7 @@ export default function SimpleMenu() {
                 <Button color="inherit">Монеты Средневековья </Button>
 
                 <Button color="inherit">Наборы монеты</Button>
-              </article>
+              </Article>
             </section>
           </div>
         </Toolbar>
@@ -77,7 +81,6 @@ export default function SimpleMenu() {
         aria-controls="simple-menu"
         aria-haspopup="true"
         variant="contained"
-        color="primary"
         onClick={handleClick}
       >
         ОТКРООООООЙ
