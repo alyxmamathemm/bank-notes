@@ -1,4 +1,9 @@
 import HouseOutlinedIcon from "@material-ui/icons/HouseOutlined";
+import AddCircleOutlineRoundedIcon from "@material-ui/icons/AddCircleOutlineRounded";
+import { makeStyles } from "@material-ui/core/styles";
+import SvgIcon from "@material-ui/core/SvgIcon";
+import { grey } from "@material-ui/core/colors";
+import StarIcon from "@material-ui/icons/Star";
 
 import React from "react";
 import {
@@ -11,10 +16,7 @@ import {
   IconButton,
 } from "@material-ui/core";
 import styled from "styled-components";
-
-<HouseOutlinedIcon color="primary" fontSize="small" />;
-<HouseOutlinedIcon>star</HouseOutlinedIcon>;
-<Typography variant="srOnly">Create a user</Typography>;
+<i class="fa fa-accusoft fa-2x"></i>;
 
 export default function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -45,8 +47,8 @@ export default function SimpleMenu() {
     padding: 5px 20px;
     border: 2px solid #000000;
     border-radius: 5px;
-    width: 200px;
-    height: 80px;
+    width: 240px;
+    height: 75px;
     flex: 1 0 21%;
 
     &:hover {
@@ -67,11 +69,33 @@ export default function SimpleMenu() {
                 <Button color="inherit">Монеты СССР</Button>
                 <Button color="inherit">Монеты РСФСР</Button>
                 <Button color="inherit">Монеты Российской империи</Button>
+                <div>
+                  <div className="Icon">
+                    <abbr title="Перейти в ваш личный кабинет ">
+                      <div className="Test">
+                        <HouseOutlinedIcon style={{ fontSize: 45 }} />
+                      </div>
+                    </abbr>
+                  </div>
+                  <div className="Icon">
+                    <abbr title="Просмотреть избранные вами монеты">
+                      <StarIcon style={{ fontSize: 45 }} />
+                    </abbr>
+                  </div>
+                </div>
+                <wrapper> </wrapper>
+
                 <Button color="inherit">Монеты Древней Руси</Button>
+
                 <Button color="inherit">Монеты Античности</Button>
                 <Button color="inherit">Монеты Средневековья </Button>
 
                 <Button color="inherit">Наборы монеты</Button>
+                <div className="Icon">
+                  <abbr title="Предложить монету для публикации">
+                    <AddCircleOutlineRoundedIcon style={{ fontSize: 45 }} />
+                  </abbr>
+                </div>
               </Article>
             </section>
           </div>
@@ -85,6 +109,71 @@ export default function SimpleMenu() {
       >
         ОТКРООООООЙ
       </Button>
+
+      <select
+        id="cd-dropdown"
+        class="cd-select"
+        onchange="top.location=this.value"
+      >
+        <option value=""></option>
+
+        <option value="https://www.youtube.com/" class="icon-1">
+          Кнопка
+        </option>
+
+        <option value="https://www.youtube.com/" class="icon-2">
+          рыжый
+        </option>
+      </select>
+
+      <style>
+        {`
+  .Icon{
+  color: #000000;
+  max-width: 100000px;
+  max-height: 1000px;
+  }
+
+  .abbr {
+    border-bottom: 1px dashed MediumBlue; 
+    color: #0000CD; 
+    font-size: 11px;
+    z-index: 1;
+    display: inline-block;
+    position: relative;
+    font-variant: none
+    width: 50px;
+    top: 100%;  
+    left: 50%;
+    margin-left: -60px; 
+   }
+  
+   .title {
+    border-bottom: 1px dashed MediumBlue; 
+    color: #0000CD; 
+    font-size: 11px;
+    z-index: 1;
+    display: inline-block;
+    position: relative;
+    font-variant: none
+    width: 50px;
+    top: 100%;  
+    left: 50%;
+    margin-left: -60px; 
+
+    
+
+    }
+
+
+   }
+  
+   
+
+}
+`}
+      </style>
+
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}

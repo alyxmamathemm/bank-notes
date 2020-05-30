@@ -10,10 +10,14 @@
   "dependencies": {
     "@material-ui/core": "^4.9.14",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.10.0",
     "flexbox": "0.0.3",
     "next": "9.3.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "vue-svgicon": "^3.2.6"
   }
 }
