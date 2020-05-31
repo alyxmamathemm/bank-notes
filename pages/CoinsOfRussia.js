@@ -14,6 +14,7 @@ import {
   Toolbar,
   Typography,
   IconButton,
+  Select,
 } from "@material-ui/core";
 import styled from "styled-components";
 <i class="fa fa-accusoft fa-2x"></i>;
@@ -37,6 +38,10 @@ export default function SimpleMenu() {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleChange = (events) => {
+    window.location = events.target.value;
   };
 
   const Button = styled.button`
@@ -110,21 +115,13 @@ export default function SimpleMenu() {
         ОТКРООООООЙ
       </Button>
 
-      <select
-        id="cd-dropdown"
-        class="cd-select"
-        onchange="top.location=this.value"
-      >
-        <option value=""></option>
+      <Select id="cd-dropdown" onChange={handleChange}>
+        <MenuItem value=""></MenuItem>
 
-        <option value="https://www.youtube.com/" class="icon-1">
-          Кнопка
-        </option>
+        <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
 
-        <option value="https://www.youtube.com/" class="icon-2">
-          рыжый
-        </option>
-      </select>
+        <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
+      </Select>
 
       <style>
         {`
