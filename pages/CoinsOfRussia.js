@@ -4,6 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import { grey } from "@material-ui/core/colors";
 import StarIcon from "@material-ui/icons/Star";
+import FormHelperText from "@material-ui/core/FormHelperText";
+import InputLabel from "@material-ui/core/InputLabel";
 
 import React from "react";
 import {
@@ -42,6 +44,7 @@ export default function SimpleMenu() {
 
   const handleChange = (events) => {
     window.location = events.target.value;
+    const name1 = value1;
   };
 
   const Button = styled.button`
@@ -76,14 +79,14 @@ export default function SimpleMenu() {
                 <Button color="inherit">Монеты Российской империи</Button>
                 <div>
                   <div className="Icon">
-                    <abbr title="Перейти в ваш личный кабинет ">
+                    <abbr title="Перейти в ваш личный кабинет.">
                       <div className="Test">
                         <HouseOutlinedIcon style={{ fontSize: 45 }} />
                       </div>
                     </abbr>
                   </div>
                   <div className="Icon">
-                    <abbr title="Просмотреть избранные вами монеты">
+                    <abbr title="Просмотреть избранные вами монеты.">
                       <StarIcon style={{ fontSize: 45 }} />
                     </abbr>
                   </div>
@@ -97,7 +100,7 @@ export default function SimpleMenu() {
 
                 <Button color="inherit">Наборы монеты</Button>
                 <div className="Icon">
-                  <abbr title="Предложить монету для публикации">
+                  <abbr title="Предложить монету для публикации.">
                     <AddCircleOutlineRoundedIcon style={{ fontSize: 45 }} />
                   </abbr>
                 </div>
@@ -106,23 +109,32 @@ export default function SimpleMenu() {
           </div>
         </Toolbar>
       </AppBar>
-      <Button
-        aria-controls="simple-menu"
-        aria-haspopup="true"
-        variant="contained"
-        onClick={handleClick}
-      >
-        ОТКРООООООЙ
-      </Button>
-
+      <p> </p>
+      <InputLabel id="demo-simple-select-label">
+        Монеты 1991-2020 года
+      </InputLabel>
       <Select id="cd-dropdown" onChange={handleChange}>
-        <MenuItem value=""></MenuItem>
-
         <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
-
         <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
       </Select>
-
+      <p> </p>
+      <InputLabel id="demo-simple-select-label">Памятные монеты</InputLabel>
+      <Select id="cd-dropdown" onChange={handleChange}>
+        <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
+        <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
+      </Select>
+      <p> </p>
+      <InputLabel id="demo-simple-select-label">Пробные монеты</InputLabel>
+      <Select id="cd-dropdown" onChange={handleChange}>
+        <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
+        <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
+      </Select>
+      <p> </p>
+      <InputLabel>Юбилейные монеты </InputLabel>{" "}
+      <Select id="cd-dropdown" onChange={handleChange}>
+        <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
+        <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
+      </Select>
       <style>
         {`
   .Icon{
@@ -130,6 +142,7 @@ export default function SimpleMenu() {
   max-width: 100000px;
   max-height: 1000px;
   }
+
 
   .abbr {
     border-bottom: 1px dashed MediumBlue; 
@@ -170,7 +183,6 @@ export default function SimpleMenu() {
 }
 `}
       </style>
-
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}

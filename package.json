@@ -11,10 +11,14 @@
     "@material-ui/core": "^4.9.14",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.10.0",
+    "@rakuten-rex/form-helper-text": "^1.0.5",
     "flexbox": "0.0.3",
+    "form-control": "^1.0.0",
+    "input": "^1.0.1",
     "next": "9.3.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-input-label": "^1.0.3",
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
