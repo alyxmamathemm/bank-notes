@@ -17,6 +17,7 @@ import {
   Typography,
   IconButton,
   Select,
+  FormControl,
 } from "@material-ui/core";
 import styled from "styled-components";
 <i class="fa fa-accusoft fa-2x"></i>;
@@ -110,31 +111,44 @@ export default function SimpleMenu() {
         </Toolbar>
       </AppBar>
       <p> </p>
-      <InputLabel id="demo-simple-select-label">
-        Монеты 1991-2020 года
-      </InputLabel>
-      <Select id="cd-dropdown" onChange={handleChange}>
-        <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
-        <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
-      </Select>
-      <p> </p>
-      <InputLabel id="demo-simple-select-label">Памятные монеты</InputLabel>
-      <Select id="cd-dropdown" onChange={handleChange}>
-        <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
-        <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
-      </Select>
-      <p> </p>
-      <InputLabel id="demo-simple-select-label">Пробные монеты</InputLabel>
-      <Select id="cd-dropdown" onChange={handleChange}>
-        <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
-        <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
-      </Select>
-      <p> </p>
-      <InputLabel>Юбилейные монеты </InputLabel>{" "}
-      <Select id="cd-dropdown" onChange={handleChange}>
-        <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
-        <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
-      </Select>
+      <form>
+        <InputLabel id="demo-simple-select-label">
+          Монеты 1991-2020 года
+        </InputLabel>
+        <Select id="cd-dropdown" onChange={handleChange}>
+          <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
+          <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
+        </Select>
+        <p> </p>
+        <InputLabel id="demo-simple-select-label">Памятные монеты</InputLabel>
+        <Select id="cd-dropdown" onChange={handleChange}>
+          <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
+          <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
+        </Select>
+        <p> </p>
+        <InputLabel id="demo-simple-select-label">Пробные монеты</InputLabel>
+        <Select id="cd-dropdown" onChange={handleChange}>
+          <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
+          <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
+        </Select>
+        <p> </p>
+        <FormControl>
+          <InputLabel htmlFor="anniversary-coins-id">
+            Юбилейные монеты{" "}
+          </InputLabel>
+          <Select
+            id="cd-dropdown"
+            onChange={handleChange}
+            inputProps={{
+              name: "anniversary-coins",
+              id: "anniversary-coins-id",
+            }}
+          >
+            <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
+            <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
+          </Select>
+        </FormControl>
+      </form>
       <style>
         {`
   .Icon{
