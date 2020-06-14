@@ -126,29 +126,33 @@ export default function SimpleMenu() {
           <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
         </Select>
         <p> </p>
-        <InputLabel id="demo-simple-select-label">Пробные монеты</InputLabel>
-        <Select id="cd-dropdown" onChange={handleChange}>
-          <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
-          <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
-        </Select>
-        <p> </p>
-        <FormControl>
-          <InputLabel htmlFor="anniversary-coins-id">
-            Юбилейные монеты{" "}
-          </InputLabel>
-          <Select
-            id="cd-dropdown"
-            onChange={handleChange}
-            inputProps={{
-              name: "anniversary-coins",
-              id: "anniversary-coins-id",
-            }}
-          >
+
+        <div className="Button">
+          <InputLabel id="demo-simple-select-label">Пробные монеты</InputLabel>
+          <Select id="cd-dropdown" onChange={handleChange}>
             <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
             <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
           </Select>
-        </FormControl>
+        </div>
+
+        <p> </p>
+
+        <InputLabel htmlFor="anniversary-coins-id">
+          Юбилейные монеты{" "}
+        </InputLabel>
+        <Select
+          id="cd-dropdown"
+          onChange={handleChange}
+          inputProps={{
+            name: "anniversary-coins",
+            id: "anniversary-coins-id",
+          }}
+        >
+          <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
+          <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
+        </Select>
       </form>
+
       <style>
         {`
   .Icon{
@@ -157,6 +161,17 @@ export default function SimpleMenu() {
   max-height: 1000px;
   }
 
+#cd-dropdown{
+  color: #000000;
+  border: 2px solid #e34761;
+  background: #000000;
+  padding: 5px 20px;
+  width: 110px
+  height: 200px;
+
+}
+
+ 
 
   .abbr {
     border-bottom: 1px dashed MediumBlue; 
@@ -171,7 +186,44 @@ export default function SimpleMenu() {
     left: 50%;
     margin-left: -60px; 
    }
-  
+   
+.select{
+  width: 300px;
+}
+
+   .FormControl{
+    max-width: 100000px;
+    max-height: 1000px;
+    width: 200px;
+    height: 200px;
+
+   }
+
+   .Select{
+    max-width: 100000px;
+    max-height: 1000px;
+    width: 200px;
+    height: 200px;
+
+   }
+
+  .InputLabel{
+    max-width: 100000px;
+    max-height: 1000px;
+    width: 200px;
+    height: 200px;
+
+  }
+
+   .MenuItem{
+    max-width: 100000px;
+    max-height: 1000px;
+    width: 200px;
+    height: 200px;
+   }
+    
+   
+
    .title {
     border-bottom: 1px dashed MediumBlue; 
     color: #0000CD; 
