@@ -20,7 +20,16 @@ import {
   FormControl,
 } from "@material-ui/core";
 import styled from "styled-components";
-<i class="fa fa-accusoft fa-2x"></i>;
+
+const MuiButton = styled(Button)`
+  background: black;
+  color: white;
+
+  &:hover {
+    background: #000000c9;
+    color: white;
+  }
+`;
 
 export default function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -111,47 +120,72 @@ export default function SimpleMenu() {
         </Toolbar>
       </AppBar>
       <p> </p>
-      <form>
-        <InputLabel id="demo-simple-select-label">
-          Монеты 1991-2020 года
-        </InputLabel>
-        <Select id="cd-dropdown" onChange={handleChange}>
-          <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
-          <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
-        </Select>
-        <p> </p>
-        <InputLabel id="demo-simple-select-label">Памятные монеты</InputLabel>
-        <Select id="cd-dropdown" onChange={handleChange}>
-          <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
-          <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
-        </Select>
-        <p> </p>
 
-        <div className="Button">
-          <InputLabel id="demo-simple-select-label">Пробные монеты</InputLabel>
-          <Select id="cd-dropdown" onChange={handleChange}>
-            <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
-            <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
-          </Select>
-        </div>
+      <MuiButton
+        aria-controls="simple-menu"
+        aria-haspopup="true"
+        onClick={handleClick}
+      >
+        Монеты 1991-2020 года
+      </MuiButton>
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Раз</MenuItem>
+        <MenuItem onClick={handleClose}>Два</MenuItem>
+        <MenuItem value="https://www.youtube.com/" onClick={handleClose}>
+          Три
+        </MenuItem>
+      </Menu>
+      <p></p>
+      <MuiButton
+        aria-controls="simple-menu"
+        aria-haspopup="true"
+        onClick={handleClick}
+      >
+        Памятные монеты
+      </MuiButton>
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>ава</MenuItem>
+        <MenuItem onClick={handleClose}>ffffав</MenuItem>
+        <MenuItem value="https://www.youtube.com/">Три</MenuItem>
+      </Menu>
 
-        <p> </p>
+      <p></p>
+      <MuiButton
+        aria-controls="simple-menu"
+        aria-haspopup="true"
+        onClick={handleClick}
+      >
+        Пробные монеты
+      </MuiButton>
 
-        <InputLabel htmlFor="anniversary-coins-id">
-          Юбилейные монеты{" "}
-        </InputLabel>
-        <Select
-          id="cd-dropdown"
-          onChange={handleChange}
-          inputProps={{
-            name: "anniversary-coins",
-            id: "anniversary-coins-id",
-          }}
-        >
-          <MenuItem value="https://www.youtube.com/">Кнопка</MenuItem>
-          <MenuItem value="https://www.youtube.com/">рыжый</MenuItem>
-        </Select>
-      </form>
+      <p></p>
+      <MuiButton
+        aria-controls="simple-menu"
+        aria-haspopup="true"
+        onClick={handleClick}
+      >
+        Юбилейные монеты
+      </MuiButton>
+      <Menu>
+        id="simple-menu" anchorEl={anchorEl}
+        keepMounted open={Boolean(anchorEl)}
+        onClose={handleClose}
+        <MenuItem onClick={handleClose}>аfffffffffffffffffвcа</MenuItem>
+        <MenuItem onClick={handleClose}>ав</MenuItem>
+        <MenuItem value="https://www.youtube.com/">Три</MenuItem>
+      </Menu>
 
       <style>
         {`
@@ -186,80 +220,10 @@ export default function SimpleMenu() {
     left: 50%;
     margin-left: -60px; 
    }
-   
-.select{
-  width: 300px;
-}
-
-   .FormControl{
-    max-width: 100000px;
-    max-height: 1000px;
-    width: 200px;
-    height: 200px;
-
-   }
-
-   .Select{
-    max-width: 100000px;
-    max-height: 1000px;
-    width: 200px;
-    height: 200px;
-
-   }
-
-  .InputLabel{
-    max-width: 100000px;
-    max-height: 1000px;
-    width: 200px;
-    height: 200px;
-
-  }
-
-   .MenuItem{
-    max-width: 100000px;
-    max-height: 1000px;
-    width: 200px;
-    height: 200px;
-   }
-    
-   
-
-   .title {
-    border-bottom: 1px dashed MediumBlue; 
-    color: #0000CD; 
-    font-size: 11px;
-    z-index: 1;
-    display: inline-block;
-    position: relative;
-    font-variant: none
-    width: 50px;
-    top: 100%;  
-    left: 50%;
-    margin-left: -60px; 
-
-    
-
-    }
-
-
-   }
   
-   
-
 }
 `}
       </style>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose}>Раз</MenuItem>
-        <MenuItem onClick={handleClose}>Два</MenuItem>
-        <MenuItem onClick={handleClose}>Три</MenuItem>
-      </Menu>
     </div>
   );
 }
